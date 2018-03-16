@@ -34,7 +34,6 @@
             this.dateLabel = new System.Windows.Forms.Label();
             this.desc_TB = new System.Windows.Forms.TextBox();
             this.descLabel = new System.Windows.Forms.Label();
-            this.type_TB = new System.Windows.Forms.TextBox();
             this.typeLabel = new System.Windows.Forms.Label();
             this.duration_TB = new System.Windows.Forms.TextBox();
             this.durationLabel = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.party_TB = new System.Windows.Forms.TextBox();
             this.partyLabel = new System.Windows.Forms.Label();
             this.addHunt_Btn = new System.Windows.Forms.Button();
+            this.type_CB = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -95,13 +95,6 @@
             this.descLabel.Size = new System.Drawing.Size(63, 13);
             this.descLabel.TabIndex = 4;
             this.descLabel.Text = "Description:";
-            // 
-            // type_TB
-            // 
-            this.type_TB.Location = new System.Drawing.Point(100, 95);
-            this.type_TB.Name = "type_TB";
-            this.type_TB.Size = new System.Drawing.Size(252, 20);
-            this.type_TB.TabIndex = 7;
             // 
             // typeLabel
             // 
@@ -186,11 +179,26 @@
             this.addHunt_Btn.UseVisualStyleBackColor = true;
             this.addHunt_Btn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // type_CB
+            // 
+            this.type_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.type_CB.FormattingEnabled = true;
+            this.type_CB.Items.AddRange(new object[] {
+            "Solo",
+            "Duo",
+            "Trio",
+            "Quad"});
+            this.type_CB.Location = new System.Drawing.Point(100, 94);
+            this.type_CB.Name = "type_CB";
+            this.type_CB.Size = new System.Drawing.Size(252, 21);
+            this.type_CB.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 347);
+            this.Controls.Add(this.type_CB);
             this.Controls.Add(this.addHunt_Btn);
             this.Controls.Add(this.party_TB);
             this.Controls.Add(this.partyLabel);
@@ -200,7 +208,6 @@
             this.Controls.Add(this.profitLabel);
             this.Controls.Add(this.duration_TB);
             this.Controls.Add(this.durationLabel);
-            this.Controls.Add(this.type_TB);
             this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.desc_TB);
             this.Controls.Add(this.descLabel);
@@ -226,7 +233,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.TextBox desc_TB;
         private System.Windows.Forms.Label descLabel;
-        private System.Windows.Forms.TextBox type_TB;
         private System.Windows.Forms.Label typeLabel;
         private System.Windows.Forms.TextBox duration_TB;
         private System.Windows.Forms.Label durationLabel;
@@ -237,6 +243,7 @@
         private System.Windows.Forms.TextBox party_TB;
         private System.Windows.Forms.Label partyLabel;
         private System.Windows.Forms.Button addHunt_Btn;
+        private System.Windows.Forms.ComboBox type_CB;
     }
 }
 

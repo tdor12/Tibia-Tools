@@ -71,7 +71,7 @@ namespace Tibia_Tools.Properties
             Console.WriteLine(eles[eles.Count - 1].FirstAttribute.Value);
         }
 
-        public void AddHunt(String huntName, String huntDate, String huntDesc, String huntType, String huntDuration, String huntProfit, String huntEXP, List<String> memberList)
+        public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, List<String> memberList, String huntType)
         {
             if (!File.Exists("HuntLog.xml"))
             {
