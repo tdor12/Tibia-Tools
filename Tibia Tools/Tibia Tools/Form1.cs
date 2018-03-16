@@ -39,6 +39,7 @@ namespace Tibia_Tools
             Singleton.Instance.SetAddHuntFields(populating);
             if (File.Exists("HuntLog.xml"))
             {
+                MessageBox.Show(Directory.GetCurrentDirectory());
 
                 //MessageBox.Show("HuntLog.xml FOUND!!");
                 //setting the doc to the existing file
@@ -57,6 +58,7 @@ namespace Tibia_Tools
           
             } else
             {
+                MessageBox.Show(Directory.GetCurrentDirectory());
                 //MessageBox.Show("HuntLog.xml not found, creating one.");
                 XmlWriterSettings settings = new XmlWriterSettings();
                 settings.Indent = true;
@@ -92,6 +94,11 @@ namespace Tibia_Tools
                     writer.WriteEndElement();
                     writer.Flush();
                     writer.Close();
+
+                    XDocument doc = Singleton.Instance.GetXML();
+                    doc = XDocument.Load("HuntLog.XML");
+                    Singleton.Instance.SetXML(doc);
+
                 }
 
 

@@ -50,4 +50,16 @@
       <Name>italo</Name>
     </Members>
   </Hunt>
+  <Hunt ID="4">
+    <Name>io</Name>
+    <Date>jo</Date>
+    <Desc>joi</Desc>
+    <Type>jio</Type>
+    <Duration>jio</Duration>
+    <Profit>joi</Profit>
+    <EXP>j</EXP>
+    <Members>
+      <Name>io</Name>
+    </Members>
+  </Hunt>
 </HuntLog>
