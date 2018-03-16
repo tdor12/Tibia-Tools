@@ -13,6 +13,7 @@ namespace Tibia_Tools.Properties
         private static Singleton instance;
         private XDocument doc = new XDocument();
         private int id;
+        private List<System.Windows.Forms.TextBox> addHuntFields;
 
 
         private Singleton() {; }
@@ -32,6 +33,15 @@ namespace Tibia_Tools.Properties
         public void SetXML(XDocument _writer)
         {
             this.doc = _writer;
+        }
+
+        public void SetAddHuntFields(List<System.Windows.Forms.TextBox> listt)
+        {
+            this.addHuntFields = listt;
+        }
+        public List<System.Windows.Forms.TextBox> GetAddHuntFields()
+        {
+            return this.addHuntFields;
         }
 
         public XDocument GetXML()
