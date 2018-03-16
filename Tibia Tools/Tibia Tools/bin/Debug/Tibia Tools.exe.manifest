@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tibia Tools.exe" size="20912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tibia Tools.exe" size="20400">
       <assemblyIdentity name="Tibia Tools" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F7jU+MoJ0HEpmP3kEBSeOaAy1RZ25Kx+bs5gZjMqX2s=</dsig:DigestValue>
+        <dsig:DigestValue>yqrV7trrtDy61KD4wEKsoB+xJaByYl6Dpq+83XflbMM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

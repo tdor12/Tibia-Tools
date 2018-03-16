@@ -39,11 +39,9 @@ namespace Tibia_Tools
             Singleton.Instance.SetAddHuntFields(populating);
             if (File.Exists("HuntLog.xml"))
             {
-                MessageBox.Show(Directory.GetCurrentDirectory());
-
-                //MessageBox.Show("HuntLog.xml FOUND!!");
-                //setting the doc to the existing file
                 XDocument doc = Singleton.Instance.GetXML();
+                try
+                {
                 doc = XDocument.Load("HuntLog.XML");
                 Singleton.Instance.SetXML(doc);
                 //setting the singleton ID to the last ID in the file, so that we can increment the right number when we try and add a new hunt session
@@ -52,57 +50,12 @@ namespace Tibia_Tools
                 var eles = hunt.Elements().ToList();
                 //setting the id to the last ID in the xml when prog loads up
                 Singleton.Instance.SetID(Convert.ToInt32(eles[eles.Count - 1].FirstAttribute.Value));
-                //List<String> myList = new List<string> { "Italo The Tank(EK 320)", "Italo The ED (321 ED)" };
-                //Singleton.Instance.AddHunt("Draken Walls Test", "3/20/2018", "Testing, bro", "Duo", "3", "100", "123456", myList);
                 }
-          
-            } else
-            {
-                MessageBox.Show(Directory.GetCurrentDirectory());
-                //MessageBox.Show("HuntLog.xml not found, creating one.");
-                XmlWriterSettings settings = new XmlWriterSettings();
-                settings.Indent = true;
-                settings.NewLineOnAttributes = true;
-
-                using (XmlWriter writer = XmlWriter.Create("HuntLog.xml", settings)) 
+                }
+                catch (Exception)
                 {
-                    Singleton.Instance.IncrementID();
-                    writer.WriteStartDocument();
-                    //huntlog begin
-                    writer.WriteStartElement("HuntLog");
-                    
-                    //hunt begin
-                    writer.WriteStartElement("Hunt");
-                    writer.WriteAttributeString("ID", "0");
-                    writer.WriteElementString("Name", "Draken Walls Test");
-                    writer.WriteElementString("Date", "3/16/2018");
-                    writer.WriteElementString("Desc", "Testing out to see if this works");
-                    writer.WriteElementString("Type", "Solo");
-                    writer.WriteElementString("Duration", "0");
-                    writer.WriteElementString("Profit", "0");
-                    writer.WriteElementString("EXP", "0");
-
-                    //members begin
-                    writer.WriteStartElement("Members");
-                    writer.WriteElementString("Name", "Italo The Tank");
-                    //members end
-                    writer.WriteEndElement();
-                    //hunt end
-                    writer.WriteEndElement();
-
-                    //huntlog end
-                    writer.WriteEndElement();
-                    writer.Flush();
-                    writer.Close();
-
-                    XDocument doc = Singleton.Instance.GetXML();
-                    doc = XDocument.Load("HuntLog.XML");
-                    Singleton.Instance.SetXML(doc);
-
+                    MessageBox.Show("Error. Something's wrong with the XML file");
                 }
-
-
-
 
             }
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,6 +73,18 @@ namespace Tibia_Tools.Properties
 
         public void AddHunt(String huntName, String huntDate, String huntDesc, String huntType, String huntDuration, String huntProfit, String huntEXP, List<String> memberList)
         {
+            if (!File.Exists("HuntLog.xml"))
+            {
+                XmlWriter writer = XmlWriter.Create("HuntLog.xml");
+                writer.WriteStartDocument();
+                writer.WriteStartElement("HuntLog");
+                writer.WriteEndElement();
+                writer.Flush();
+                writer.Close();
+                XDocument doc = Singleton.Instance.GetXML();
+                doc = XDocument.Load("HuntLog.XML");
+                Singleton.Instance.SetXML(doc);
+            }
             List<XElement> membersList = new List<XElement>();
             memberList.ForEach(delegate (String _name) {
                 membersList.Add(new XElement("Name", _name));
