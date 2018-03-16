@@ -22,17 +22,6 @@ namespace Tibia_Tools
             InitializeComponent();
         }
 
-        /*
-         *Date: MM/DD/YYYY
-         * HuntName:
-         * Desc:
-         * Type: Solo, Duo, Trio, 4man
-         * Duration:
-         * Profit:
-         * TotalExp:
-         * MemberNames:
-         * 
-         */
         private void Form1_Load(object sender, EventArgs e)
         {
             List<System.Windows.Forms.TextBox> populating = new List<System.Windows.Forms.TextBox> { name_TB, date_TB, desc_TB, type_TB, duration_TB, profit_TB, exp_TB, party_TB};
