@@ -24,6 +24,7 @@ namespace Tibia_Tools
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            date_TB.Text = DateTime.Now.ToString("MM/dd/yyyy");
             List<System.Windows.Forms.TextBox> populating = new List<System.Windows.Forms.TextBox> { name_TB, date_TB, desc_TB, type_TB, duration_TB, profit_TB, exp_TB, party_TB};
             Singleton.Instance.SetAddHuntFields(populating);
             if (File.Exists("HuntLog.xml"))
