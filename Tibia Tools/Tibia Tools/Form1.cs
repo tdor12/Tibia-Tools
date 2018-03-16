@@ -59,6 +59,10 @@ namespace Tibia_Tools
             {
                 if (listerino[i].Text != "")
                 {
+                    if (listerino[i] == profit_TB || listerino[i] == exp_TB)
+                    {
+                        listerino[i].Text = Regex.Replace(listerino[i].Text, @"k", "000");
+                    }
                     //Console.WriteLine(listerino[i].Text);
                     if (i == listerino.Count - 1)
                     {
