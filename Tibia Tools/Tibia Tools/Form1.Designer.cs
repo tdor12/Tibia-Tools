@@ -45,6 +45,7 @@
             this.partyLabel = new System.Windows.Forms.Label();
             this.addHunt_Btn = new System.Windows.Forms.Button();
             this.type_CB = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -171,7 +172,7 @@
             // 
             // addHunt_Btn
             // 
-            this.addHunt_Btn.Location = new System.Drawing.Point(26, 253);
+            this.addHunt_Btn.Location = new System.Drawing.Point(15, 236);
             this.addHunt_Btn.Name = "addHunt_Btn";
             this.addHunt_Btn.Size = new System.Drawing.Size(113, 43);
             this.addHunt_Btn.TabIndex = 16;
@@ -193,11 +194,21 @@
             this.type_CB.Size = new System.Drawing.Size(252, 21);
             this.type_CB.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(162, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 49);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Calculate Party Profit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 347);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.type_CB);
             this.Controls.Add(this.addHunt_Btn);
             this.Controls.Add(this.party_TB);
@@ -244,6 +255,7 @@
         private System.Windows.Forms.Label partyLabel;
         private System.Windows.Forms.Button addHunt_Btn;
         private System.Windows.Forms.ComboBox type_CB;
+        private System.Windows.Forms.Button button1;
     }
 }
 
