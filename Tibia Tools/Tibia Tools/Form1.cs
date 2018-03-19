@@ -15,9 +15,9 @@ using System.Text.RegularExpressions;
 
 namespace Tibia_Tools
 {
-    public partial class Form1 : Form
+    public partial class HuntLogForm : Form
     {
-        public Form1()
+        public HuntLogForm()
         {
             InitializeComponent();
         }
@@ -88,6 +88,12 @@ namespace Tibia_Tools
 
 
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PartyCalculatorForm test = new PartyCalculatorForm(this);
+            test.Show();
         }
     }
 }

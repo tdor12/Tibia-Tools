@@ -3,7 +3,6 @@ C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\bin\Debug\Tibia Tools.exe.mani
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\bin\Debug\Tibia Tools.application
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\bin\Debug\Tibia Tools.exe
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\bin\Debug\Tibia Tools.pdb
-C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia_Tools.Form1.resources
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia_Tools.Properties.Resources.resources
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.csproj.GenerateResource.cache
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.csproj.CoreCompileInputs.cache
@@ -12,3 +11,6 @@ C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.exe.mani
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.application
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.exe
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.pdb
+C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.csprojResolveAssemblyReference.cache
+C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia_Tools.HuntLogForm.resources
+C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia_Tools.PartyCalculatorForm.resources

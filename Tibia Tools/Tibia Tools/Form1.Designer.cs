@@ -1,6 +1,6 @@
 ﻿namespace Tibia_Tools
 {
-    partial class Form1
+    partial class HuntLogForm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             this.partyLabel = new System.Windows.Forms.Label();
             this.addHunt_Btn = new System.Windows.Forms.Button();
             this.type_CB = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.partyBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -194,21 +194,22 @@
             this.type_CB.Size = new System.Drawing.Size(252, 21);
             this.type_CB.TabIndex = 17;
             // 
-            // button1
+            // partyBtn
             // 
-            this.button1.Location = new System.Drawing.Point(162, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 49);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Calculate Party Profit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.partyBtn.Location = new System.Drawing.Point(162, 236);
+            this.partyBtn.Name = "partyBtn";
+            this.partyBtn.Size = new System.Drawing.Size(117, 49);
+            this.partyBtn.TabIndex = 18;
+            this.partyBtn.Text = "Calculate Party Profit";
+            this.partyBtn.UseVisualStyleBackColor = true;
+            this.partyBtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Form1
+            // HuntLogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 347);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.partyBtn);
             this.Controls.Add(this.type_CB);
             this.Controls.Add(this.addHunt_Btn);
             this.Controls.Add(this.party_TB);
@@ -226,8 +227,8 @@
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.name_TB);
             this.Controls.Add(this.nameLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "HuntLogForm";
+            this.Text = "Hunt Log Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,7 +256,7 @@
         private System.Windows.Forms.Label partyLabel;
         private System.Windows.Forms.Button addHunt_Btn;
         private System.Windows.Forms.ComboBox type_CB;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button partyBtn;
     }
 }
 
