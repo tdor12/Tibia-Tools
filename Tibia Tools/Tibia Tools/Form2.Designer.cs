@@ -143,7 +143,7 @@
             this.Controls.Add(this.supplyCost_TB);
             this.Controls.Add(this.label1);
             this.Name = "PartyCalculatorForm";
-            this.Text = "Form2";
+            this.Text = "Party Form";
             this.Load += new System.EventHandler(this.PartyCalculatorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

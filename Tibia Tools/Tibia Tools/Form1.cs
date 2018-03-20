@@ -24,6 +24,7 @@ namespace Tibia_Tools
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            type_CB.SelectedIndex = 0;
             date_TB.Text = DateTime.Now.ToString("MM/dd/yyyy");
             List<System.Windows.Forms.TextBox> populating = new List<System.Windows.Forms.TextBox> { name_TB, date_TB, desc_TB, duration_TB, profit_TB, exp_TB, party_TB};
             Singleton.Instance.SetAddHuntFields(populating);
@@ -81,7 +82,6 @@ namespace Tibia_Tools
                     return;
                 }
             }
-
 
             //AddHunt(String huntName, String huntDate, String huntDesc, String huntType, String huntDuration, String huntProfit, String huntEXP, List<String> memberList)
             Singleton.Instance.AddHunt(addHuntValues[0], addHuntValues[1], addHuntValues[2], addHuntValues[3], addHuntValues[4], addHuntValues[5], partyMembers, type_CB.SelectedItem.ToString());

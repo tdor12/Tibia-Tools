@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HuntLog>
+  <Hunt ID="1">
+    <Name>1</Name>
+    <Date>03/19/2018</Date>
+    <Desc>1</Desc>
+    <Type>Solo</Type>
+    <Duration>1</Duration>
+    <Profit>500,000</Profit>
+    <EXP>11</EXP>
+    <Members>
+      <Name>1</Name>
+    </Members>
+  </Hunt>
+</HuntLog>
