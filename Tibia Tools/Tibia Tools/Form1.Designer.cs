@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HuntLogForm));
             this.nameLabel = new System.Windows.Forms.Label();
             this.name_TB = new System.Windows.Forms.TextBox();
             this.date_TB = new System.Windows.Forms.TextBox();
@@ -227,6 +228,7 @@
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.name_TB);
             this.Controls.Add(this.nameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HuntLogForm";
             this.Text = "Hunt Log Form";
             this.Load += new System.EventHandler(this.Form1_Load);
