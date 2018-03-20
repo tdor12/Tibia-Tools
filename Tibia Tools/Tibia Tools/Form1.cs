@@ -26,8 +26,6 @@ namespace Tibia_Tools
         {
             type_CB.SelectedIndex = 0;
             date_TB.Text = DateTime.Now.ToString("MM/dd/yyyy");
-            List<System.Windows.Forms.TextBox> populating = new List<System.Windows.Forms.TextBox> { name_TB, date_TB, desc_TB, duration_TB, profit_TB, exp_TB, party_TB};
-            Singleton.Instance.SetAddHuntFields(populating);
             if (File.Exists("HuntLog.xml"))
             {
                 XDocument doc = Singleton.Instance.GetXML();
@@ -53,38 +51,29 @@ namespace Tibia_Tools
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<String> addHuntValues = new List<String>();
             List<String> partyMembers = new List<String>();
-           // String[] partyMembers = { "Empty" };
-            List<System.Windows.Forms.TextBox> listerino = Singleton.Instance.GetAddHuntFields();
-            for (int i = 0; i < listerino.Count; i++)
+            String name = name_TB.Text;
+            String date = date_TB.Text;
+            String desc = desc_TB.Text;
+            String duration = duration_TB.Text;
+            String profit = profit_TB.Text;
+            String exp = exp_TB.Text;
+            String party = party_TB.Text;
+            if (name != "" && date != "" &&  desc != "" && duration != "" && profit != "" && exp  != "" && party != "")
             {
-                if (listerino[i].Text != "")
-                {
-                    if (listerino[i] == profit_TB || listerino[i] == exp_TB)
-                    {
-                        listerino[i].Text = Regex.Replace(listerino[i].Text, @"k", "000");
-                    }
-                    //Console.WriteLine(listerino[i].Text);
-                    if (i == listerino.Count - 1)
-                    {
-                        String foo = listerino[i].Text;
-                        partyMembers = Regex.Replace(foo, @"\s+", "").Split(',').ToList();
-                        break;
-                    }
+                profit = Regex.Replace(profit, @"k", "000");
+                exp = Regex.Replace(exp, @"k", "000");
+                partyMembers = Regex.Replace(party, @"\s+", "").Split(',').ToList();
 
-                    addHuntValues.Add(listerino[i].Text);
-                }
-                else
-                {
-                    MessageBox.Show("Please fill out the empty field");
-                    listerino[i].Focus();
-                    return;
-                }
+                //public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, List<String> memberList, String huntType)
+                Singleton.Instance.AddHunt(name, date, desc, duration, profit, exp, partyMembers, type_CB.SelectedItem.ToString());
+
+            } else
+            {
+                MessageBox.Show("Please fill out the empty field");
+                return;
             }
 
-            //AddHunt(String huntName, String huntDate, String huntDesc, String huntType, String huntDuration, String huntProfit, String huntEXP, List<String> memberList)
-            Singleton.Instance.AddHunt(addHuntValues[0], addHuntValues[1], addHuntValues[2], addHuntValues[3], addHuntValues[4], addHuntValues[5], partyMembers, type_CB.SelectedItem.ToString());
 
 
 
