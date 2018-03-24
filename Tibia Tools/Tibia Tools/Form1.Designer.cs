@@ -47,6 +47,7 @@
             this.addHunt_Btn = new System.Windows.Forms.Button();
             this.type_CB = new System.Windows.Forms.ComboBox();
             this.partyBtn = new System.Windows.Forms.Button();
+            this.generate_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -205,11 +206,22 @@
             this.partyBtn.UseVisualStyleBackColor = true;
             this.partyBtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // generate_btn
+            // 
+            this.generate_btn.Location = new System.Drawing.Point(309, 255);
+            this.generate_btn.Name = "generate_btn";
+            this.generate_btn.Size = new System.Drawing.Size(75, 23);
+            this.generate_btn.TabIndex = 19;
+            this.generate_btn.Text = "Generate";
+            this.generate_btn.UseVisualStyleBackColor = true;
+            this.generate_btn.Click += new System.EventHandler(this.generate_btn_Click);
+            // 
             // HuntLogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 347);
+            this.Controls.Add(this.generate_btn);
             this.Controls.Add(this.partyBtn);
             this.Controls.Add(this.type_CB);
             this.Controls.Add(this.addHunt_Btn);
@@ -259,6 +271,7 @@
         private System.Windows.Forms.Button addHunt_Btn;
         private System.Windows.Forms.ComboBox type_CB;
         private System.Windows.Forms.Button partyBtn;
+        private System.Windows.Forms.Button generate_btn;
     }
 }
 
