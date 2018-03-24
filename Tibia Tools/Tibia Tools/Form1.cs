@@ -80,12 +80,30 @@ namespace Tibia_Tools
 
         }
 
+        String shortenNumber(String num)
+        {
+            int index = 0;
+            int it = 0;
+            String number = "";
+            if (num.Length > 3)
+            {
+                number = num.Substring(0, num.IndexOf(',') + 2);
+                for (int i = 0; i < num.Count(x => x == ','); i++)
+                {
+                    number += "k";
+                }
+                return number;
+            }
+
+            return num;
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             PartyCalculatorForm test = new PartyCalculatorForm(this);
             test.Show();
         }
-
+        //<table class=""sortable"" style=\""width: 50 % \"">
         private void generate_btn_Click(object sender, EventArgs e)
         {
             string html = @"<!DOCTYPE html>
@@ -102,13 +120,86 @@ table, th, td {{
 
 <h2>Hunt Log</h2>
 
-<table style=\""width: 50 % \"">
+<table id=""myTable"" width=""50%"">
+<thead>
 <tr>
-<th>Name</th><th>Date</th><th>Description</th><th>Type</th><th>Duration (hours)</th><th>Profit</th><th>EXP</th><th>Level</th><th>Members</th>
+    <th onclick=""sortTable(0)"">Name</th>    <th onclick=""sortTable(1)"">Date</th>    <th onclick=""sortTable(2)"">Description</th>    <th onclick=""sortTable(3)"">Type</th>    <th>Duration (hours)</th>    <th>Profit</th>    <th>EXP</th>    <th>Level</th>    <th onclick=""sortTable(8)"">Members</th>
 </tr>
+</thead>
+<tbody>
 
 {0}
-</table >
+</tbody>
+</table>
+<!--Didn't want to write this myself, so here's the link to where I grabbed it from: https://www.w3schools.com/howto/howto_js_sort_table.asp -->
+<script>
+function sortTable(n) {{
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(""myTable"");
+  switching = true;
+            //Set the sorting direction to ascending:
+            dir = ""asc"";
+            /*Make a loop that will continue until
+            no switching has been done:*/
+            while (switching)
+            {{
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.getElementsByTagName(""TR"");
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++)
+                {{
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName(""TD"")[n];
+                    y = rows[i + 1].getElementsByTagName(""TD"")[n];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    if (dir == ""asc"")
+                    {{
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase())
+                        {{
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }}
+                    }}
+                    else if (dir == ""desc"")
+                    {{
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())
+                        {{
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }}
+                    }}
+                }}
+                if (shouldSwitch)
+                {{
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                }}
+                else
+                {{
+                    /*If no switching has been done AND the direction is,
+                    set the direction to ""desc"" and run the while loop again.*/
+                    if (switchcount == 0 && dir == ""asc"")
+                    {{
+                        dir = ""desc"";
+                        switching = true;
+                    }}
+                }}
+            }}
+        }}
+</script>
+
 
 </body >
 </html >
@@ -128,9 +219,14 @@ table, th, td {{
                     if (child1.Name == "Profit")
                     {
                         totalMoney += Convert.ToInt64(child1.Value);
+                        test += string.Format("<td>{0}</\td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value)))); 
+                        continue;
+
                     } else if (child1.Name == "EXP")
                     {
                         totalXP += Convert.ToInt64(child1.Value);
+                        test += string.Format("<td>{0}</\td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value))));
+                        continue;
                     } else if (child1.Name == "Duration")
                     {
                         totalHours += Convert.ToDouble(child1.Value);
@@ -139,7 +235,8 @@ table, th, td {{
                 }
                 test += "</tr>";
             }
-            File.WriteAllText("HuntLogSummary.html", String.Format(html, test, String.Format("<br/>Total Profit: {0}<br/> Total EXP: {1}<br/> Total Hours: {2}", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours)));
+            File.WriteAllText("HuntLogSummary.html",String.Format(html, test, String.Format("<br/>Total Profit: {0} ({3})<br/> Total EXP: {1} ({4})<br/> Total Hours: {2}", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours, shortenNumber(String.Format("{0:#,##0}", totalMoney)), shortenNumber(String.Format("{0:#,##0}", totalXP)))));
+            Console.WriteLine(shortenNumber(String.Format("{0:#,##0}", totalMoney)));
         }
     }
 }
