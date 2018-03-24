@@ -48,6 +48,8 @@
             this.type_CB = new System.Windows.Forms.ComboBox();
             this.partyBtn = new System.Windows.Forms.Button();
             this.generate_btn = new System.Windows.Forms.Button();
+            this.level_TB = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -174,10 +176,10 @@
             // 
             // addHunt_Btn
             // 
-            this.addHunt_Btn.Location = new System.Drawing.Point(15, 236);
+            this.addHunt_Btn.Location = new System.Drawing.Point(22, 267);
             this.addHunt_Btn.Name = "addHunt_Btn";
-            this.addHunt_Btn.Size = new System.Drawing.Size(113, 43);
-            this.addHunt_Btn.TabIndex = 16;
+            this.addHunt_Btn.Size = new System.Drawing.Size(113, 46);
+            this.addHunt_Btn.TabIndex = 18;
             this.addHunt_Btn.Text = "Add Hunt";
             this.addHunt_Btn.UseVisualStyleBackColor = true;
             this.addHunt_Btn.Click += new System.EventHandler(this.button1_Click);
@@ -198,29 +200,47 @@
             // 
             // partyBtn
             // 
-            this.partyBtn.Location = new System.Drawing.Point(162, 236);
+            this.partyBtn.Location = new System.Drawing.Point(141, 267);
             this.partyBtn.Name = "partyBtn";
-            this.partyBtn.Size = new System.Drawing.Size(117, 49);
-            this.partyBtn.TabIndex = 18;
+            this.partyBtn.Size = new System.Drawing.Size(116, 46);
+            this.partyBtn.TabIndex = 19;
             this.partyBtn.Text = "Calculate Party Profit";
             this.partyBtn.UseVisualStyleBackColor = true;
             this.partyBtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // generate_btn
             // 
-            this.generate_btn.Location = new System.Drawing.Point(309, 255);
+            this.generate_btn.Location = new System.Drawing.Point(263, 267);
             this.generate_btn.Name = "generate_btn";
-            this.generate_btn.Size = new System.Drawing.Size(75, 23);
-            this.generate_btn.TabIndex = 19;
+            this.generate_btn.Size = new System.Drawing.Size(109, 46);
+            this.generate_btn.TabIndex = 21;
             this.generate_btn.Text = "Generate";
             this.generate_btn.UseVisualStyleBackColor = true;
             this.generate_btn.Click += new System.EventHandler(this.generate_btn_Click);
+            // 
+            // level_TB
+            // 
+            this.level_TB.Location = new System.Drawing.Point(100, 225);
+            this.level_TB.Name = "level_TB";
+            this.level_TB.Size = new System.Drawing.Size(252, 20);
+            this.level_TB.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Level";
             // 
             // HuntLogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 347);
+            this.Controls.Add(this.level_TB);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.generate_btn);
             this.Controls.Add(this.partyBtn);
             this.Controls.Add(this.type_CB);
@@ -272,6 +292,8 @@
         private System.Windows.Forms.ComboBox type_CB;
         private System.Windows.Forms.Button partyBtn;
         private System.Windows.Forms.Button generate_btn;
+        private System.Windows.Forms.TextBox level_TB;
+        private System.Windows.Forms.Label label2;
     }
 }
 

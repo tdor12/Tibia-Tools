@@ -71,7 +71,7 @@ namespace Tibia_Tools.Properties
             Console.WriteLine(eles[eles.Count - 1].FirstAttribute.Value);
         }
 
-        public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, List<String> memberList, String huntType)
+        public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, String huntLevel, List<String> memberList, String huntType)
         {
             if (!File.Exists("HuntLog.xml"))
             {
@@ -104,9 +104,10 @@ namespace Tibia_Tools.Properties
                 XElement duration = new XElement("Duration", huntDuration);
                 XElement profit = new XElement("Profit", huntProfit);
                 XElement EXP = new XElement("EXP", huntEXP);
+                XElement level = new XElement("Level", huntLevel);
                 XElement members = new XElement("Members", membersList[0]);
                 hunt.Add(new XElement("Hunt", new XAttribute("ID", id.ToString()),
-                    name, date, desc, type, duration, profit, EXP, members));
+                    name, date, desc, type, duration, profit, EXP, level, members));
                 XElement test = doc.Descendants("Hunt").Where(x => (string)x.Attribute("ID") == id.ToString()).FirstOrDefault();
                 IEnumerable<XElement> rows = test.Descendants("Members");
                 XElement firstRow = rows.First();

@@ -59,14 +59,15 @@ namespace Tibia_Tools
             String profit = profit_TB.Text;
             String exp = exp_TB.Text;
             String party = party_TB.Text;
-            if (name != "" && date != "" &&  desc != "" && duration != "" && profit != "" && exp  != "" && party != "")
+            String level = level_TB.Text;
+            if (name != "" && date != "" &&  desc != "" && duration != "" && profit != "" && exp  != "" && party != "" && level != "")
             {
                 profit = Regex.Replace(profit, @"k", "000");
                 exp = Regex.Replace(exp, @"k", "000");
                 partyMembers = Regex.Replace(party, @"\s+", "").Split(',').ToList();
 
                 //public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, List<String> memberList, String huntType)
-                Singleton.Instance.AddHunt(name, date, desc, duration, profit, exp, partyMembers, type_CB.SelectedItem.ToString());
+                Singleton.Instance.AddHunt(name, date, desc, duration, profit, exp, level, partyMembers, type_CB.SelectedItem.ToString());
 
             } else 
             {
@@ -103,7 +104,7 @@ table, th, td {{
 
 <table style=\""width: 50 % \"">
 <tr>
-<th>Name</th><th>Date</th><th>Description</th><th>Type</th><th>Duration (hours)</th><th>Profit</th><th>EXP</th><th>Members</th>
+<th>Name</th><th>Date</th><th>Description</th><th>Type</th><th>Duration (hours)</th><th>Profit</th><th>EXP</th><th>Level</th><th>Members</th>
 </tr>
 
 {0}
