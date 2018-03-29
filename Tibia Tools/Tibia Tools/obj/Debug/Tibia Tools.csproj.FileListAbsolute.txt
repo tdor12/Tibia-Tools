@@ -13,4 +13,3 @@ C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.exe.mani
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.application
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.exe
 C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.pdb
-C:\Users\Foo\source\repos\Tibia Tools\Tibia Tools\obj\Debug\Tibia Tools.csprojResolveAssemblyReference.cache
