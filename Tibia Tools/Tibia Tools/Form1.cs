@@ -12,6 +12,7 @@ using System.Xml;
 using Tibia_Tools.Properties;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace Tibia_Tools
 {
@@ -110,20 +111,64 @@ namespace Tibia_Tools
 <html>
 <head>
 <style>
-table, th, td {{
+body {{
+    background-color: ##6c6c6c;
+}}
+table {{
     border: 1px solid black;
     border-collapse: collapse;
+    width: 100%;
+}}
+
+p {{
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #4CAF50;
+    color: white;
+}}
+th, td {{
+    text-align: left;
+    padding: 8px;
+    font-family: Verdana, Geneva, sans-serif;
+}}
+
+tr:nth-child(even){{background-color: #f2f2f2}}
+
+th {{
+    background-color: #4CAF50;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+}}
+h1 {{
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+}}
+
+span {{
+    <!--background-color: #4CAF50;-->
+    <!--color: white; -->
+    font-family: Verdana, Geneva, sans-serif;
+
 }}
 </style>
 </head>
 <body>
 
-<h2>Hunt Log</h2>
-
+<h1><center>Hunt Log</center></h1>
 <table id=""myTable"" width=""50%"">
 <thead>
 <tr>
-    <th onclick=""sortTable(0)"">Name</th>    <th onclick=""sortTable(1)"">Date</th>    <th onclick=""sortTable(2)"">Description</th>    <th onclick=""sortTable(3)"">Type</th>    <th>Duration (hours)</th>    <th>Profit</th>    <th>EXP</th>    <th>Level</th>    <th onclick=""sortTable(8)"">Members</th>
+    <th onclick=""sortTable(0)"">Name</th>
+
+    <th onclick=""sortTable(1)"">Date</th>
+    <th onclick=""sortTable(2)"">Description</th>
+    <th onclick=""sortTable(3)"">Type</th>
+    <th>Duration (hours)</th>
+    <th>Profit</th>
+    <th>EXP</th>
+    <th>Level</th>
+    <th onclick=""sortTable(8)"">Members</th>
 </tr>
 </thead>
 <tbody>
@@ -235,8 +280,9 @@ function sortTable(n) {{
                 }
                 test += "</tr>";
             }
-            File.WriteAllText("HuntLogSummary.html",String.Format(html, test, String.Format("<br/>Total Profit: {0} ({3})<br/> Total EXP: {1} ({4})<br/> Total Hours: {2}", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours, shortenNumber(String.Format("{0:#,##0}", totalMoney)), shortenNumber(String.Format("{0:#,##0}", totalXP)))));
+            File.WriteAllText("HuntLogSummary.html",String.Format(html, test, String.Format("<center><p><b>Total Profit: {0} ({3})<br/> Total EXP: {1} ({4})<br/> Total Hours: {2}</b></p></center>", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours, shortenNumber(String.Format("{0:#,##0}", totalMoney)), shortenNumber(String.Format("{0:#,##0}", totalXP)))));
             Console.WriteLine(shortenNumber(String.Format("{0:#,##0}", totalMoney)));
+            Process.Start(@"HuntLogSummary.html");
         }
     }
 }

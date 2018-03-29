@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HuntLog>
+  <Hunt ID="1">
+    <Name>Glooth bandits</Name>
+    <Date>03/29/2018</Date>
+    <Desc>chillin</Desc>
+    <Type>Solo</Type>
+    <Duration>2</Duration>
+    <Profit>125000</Profit>
+    <EXP>2000000</EXP>
+    <Level>300</Level>
+    <Members>
+      <Name>medicalwizard</Name>
+    </Members>
+  </Hunt>
+  <Hunt ID="2">
+    <Name>Lizard CIty</Name>
+    <Date>03/30/2018</Date>
+    <Desc>naisu</Desc>
+    <Type>Solo</Type>
+    <Duration>1</Duration>
+    <Profit>1233</Profit>
+    <EXP>132412312</EXP>
+    <Level>221</Level>
+    <Members>
+      <Name>Italo</Name>
+    </Members>
+  </Hunt>
+  <Hunt ID="3">
+    <Name>Rotworms</Name>
+    <Date>03/30/2018</Date>
+    <Desc>LEL</Desc>
+    <Type>Solo</Type>
+    <Duration>2.5</Duration>
+    <Profit>123123</Profit>
+    <EXP>123100</EXP>
+    <Level>112</Level>
+    <Members>
+      <Name>HehexD</Name>
+    </Members>
+  </Hunt>
+</HuntLog>

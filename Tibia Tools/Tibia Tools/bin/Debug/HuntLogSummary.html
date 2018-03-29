@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: ##6c6c6c;
+}
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #4CAF50;
+    color: white;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+}
+h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+span {
+    <!--background-color: #4CAF50;-->
+    <!--color: white; -->
+    font-family: Verdana, Geneva, sans-serif;
+
+}
+</style>
+</head>
+<body>
+
+<h1><center>Hunt Log</center></h1>
+<table id="myTable" width="50%">
+<thead>
+<tr>
+    <th onclick="sortTable(0)">Name</th>
+
+    <th onclick="sortTable(1)">Date</th>
+    <th onclick="sortTable(2)">Description</th>
+    <th onclick="sortTable(3)">Type</th>
+    <th>Duration (hours)</th>
+    <th>Profit</th>
+    <th>EXP</th>
+    <th>Level</th>
+    <th onclick="sortTable(8)">Members</th>
+</tr>
+</thead>
+<tbody>
+
+<tr><td>Glooth bandits</	d><td>03/29/2018</	d><td>chillin</	d><td>Solo</	d><td>2</	d><td>125,0k</	d><td>2,0kk</	d><td>300</	d><td>medicalwizard</	d></tr><tr><td>Lizard CIty</	d><td>03/30/2018</	d><td>naisu</	d><td>Solo</	d><td>1</	d><td>1,2k</	d><td>132,4kk</	d><td>221</	d><td>Italo</	d></tr><tr><td>Rotworms</	d><td>03/30/2018</	d><td>LEL</	d><td>Solo</	d><td>2.5</	d><td>123,1k</	d><td>123,1k</	d><td>112</	d><td>HehexD</	d></tr>
+</tbody>
+</table>
+<!--Didn't want to write this myself, so here's the link to where I grabbed it from: https://www.w3schools.com/howto/howto_js_sort_table.asp -->
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+            //Set the sorting direction to ascending:
+            dir = "asc";
+            /*Make a loop that will continue until
+            no switching has been done:*/
+            while (switching)
+            {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.getElementsByTagName("TR");
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++)
+                {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    if (dir == "asc")
+                    {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase())
+                        {
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                    else if (dir == "desc")
+                    {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())
+                        {
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch)
+                {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                }
+                else
+                {
+                    /*If no switching has been done AND the direction is,
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc")
+                    {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+</script>
+
+
+</body >
+</html >
+
+<center><p><b>Total Profit: 249,356 (249,3k)<br/> Total EXP: 134,535,412 (134,5kk)<br/> Total Hours: 5.5</b></p></center>
