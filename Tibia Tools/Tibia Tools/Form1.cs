@@ -146,10 +146,10 @@ h1 {{
     color: white;
 }}
 
-span {{
-    <!--background-color: #4CAF50;-->
-    <!--color: white; -->
-    font-family: Verdana, Geneva, sans-serif;
+#foot {{
+	position:absolute;
+	bottom:0;
+	font-family: Verdana, Geneva, sans-serif;
 
 }}
 </style>
@@ -245,12 +245,11 @@ function sortTable(n) {{
             }}
         }}
 </script>
-
-
+{1}
+<div id=""foot""> 2017, Italo Moraes </div>
 </body >
 </html >
-
-{1}";
+";
             long totalMoney = 0;
             long totalXP = 0;
             string test = "";
