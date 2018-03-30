@@ -264,23 +264,23 @@ function sortTable(n) {{
                     if (child1.Name == "Profit")
                     {
                         totalMoney += Convert.ToInt64(child1.Value);
-                        test += string.Format("<td>{0}</\td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value)))); 
+                        test += string.Format("<td>{0}</td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value)))); 
                         continue;
 
                     } else if (child1.Name == "EXP")
                     {
                         totalXP += Convert.ToInt64(child1.Value);
-                        test += string.Format("<td>{0}</\td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value))));
+                        test += string.Format("<td>{0}</td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value))));
                         continue;
                     } else if (child1.Name == "Duration")
                     {
                         totalHours += Convert.ToDouble(child1.Value);
                     }
-                    test += string.Format("<td>{0}</\td>", child1.Value);
+                    test += string.Format("<td>{0}</td>\n", child1.Value);
                 }
-                test += "</tr>";
+                test += "</tr>\n";
             }
-            File.WriteAllText("HuntLogSummary.html",String.Format(html, test, String.Format("<center><p><b>Total Profit: {0} ({3})<br/> Total EXP: {1} ({4})<br/> Total Hours: {2}</b></p></center>", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours, shortenNumber(String.Format("{0:#,##0}", totalMoney)), shortenNumber(String.Format("{0:#,##0}", totalXP)))));
+            File.WriteAllText("HuntLogSummary.html",String.Format(html, test, String.Format("<center><p><b>\nTotal Profit: {0} ({3})<br/>\n Total EXP: {1} ({4})<br/>\n Total Hours: {2}\n</b></p></center>", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours, shortenNumber(String.Format("{0:#,##0}", totalMoney)), shortenNumber(String.Format("{0:#,##0}", totalXP)))));
             Console.WriteLine(shortenNumber(String.Format("{0:#,##0}", totalMoney)));
             Process.Start(@"HuntLogSummary.html");
         }
