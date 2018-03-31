@@ -25,6 +25,7 @@ namespace Tibia_Tools
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
             type_CB.SelectedIndex = 0;
             date_TB.Text = DateTime.Now.ToString("MM/dd/yyyy");
             if (File.Exists("HuntLog.xml"))

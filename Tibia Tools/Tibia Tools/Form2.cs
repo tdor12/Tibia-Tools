@@ -22,6 +22,7 @@ namespace Tibia_Tools
 
         private void PartyCalculatorForm_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
 
         }
 
