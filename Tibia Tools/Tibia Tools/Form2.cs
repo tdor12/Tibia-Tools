@@ -26,11 +26,6 @@ namespace Tibia_Tools
 
         }
 
-        private void supplyCost_TB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void calculate_btn_Click(object sender, EventArgs e)
         {
             if (supplyCost_TB.Text != "" && totalLoot_TB.Text != "")

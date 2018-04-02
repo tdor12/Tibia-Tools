@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HuntLog>
+  <Hunt ID="1">
+    <Name>asfdf</Name>
+    <Date>04/02/2018</Date>
+    <Desc>sdfasdf</Desc>
+    <Type>Solo</Type>
+    <Duration>123</Duration>
+    <Profit>213</Profit>
+    <EXP>123</EXP>
+    <Level>111</Level>
+    <Members>123</Members>
+  </Hunt>
+</HuntLog>

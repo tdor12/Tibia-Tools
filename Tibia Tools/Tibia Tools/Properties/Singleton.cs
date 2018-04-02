@@ -68,7 +68,6 @@ namespace Tibia_Tools.Properties
         {
             XElement hunt = doc.Descendants("HuntLog").FirstOrDefault();
             var eles = hunt.Elements().ToList();
-            Console.WriteLine(eles[eles.Count - 1].FirstAttribute.Value);
         }
 
         public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, String huntLevel, String huntMembers, String huntType)
@@ -85,17 +84,9 @@ namespace Tibia_Tools.Properties
                 doc = XDocument.Load("HuntLog.XML");
                 Singleton.Instance.SetXML(doc);
             }
-            //List<XElement> membersList = new List<XElement>();
-            //memberList.ForEach(delegate (String _name) {
-            //    membersList.Add(new XElement("Name", _name));
-
-            //});
-            Console.WriteLine("Inside addhunt");
-            Console.WriteLine(id);
             XElement hunt = doc.Descendants("HuntLog").FirstOrDefault();
             if (hunt != null)
             {
-                Console.WriteLine("Inside hunt != null");
                 IncrementID();
                 XElement name = new XElement("Name", huntName);
                 XElement date = new XElement("Date", huntDate);
@@ -108,13 +99,6 @@ namespace Tibia_Tools.Properties
                 XElement members = new XElement("Members", huntMembers);
                 hunt.Add(new XElement("Hunt", new XAttribute("ID", id.ToString()),
                     name, date, desc, type, duration, profit, EXP, level, members));
-                //XElement test = doc.Descendants("Hunt").Where(x => (string)x.Attribute("ID") == id.ToString()).FirstOrDefault();
-                //IEnumerable<XElement> rows = test.Descendants("Members");
-                //XElement firstRow = rows.First();
-                //for (int i = 1; i < membersList.Count; i++)
-                //{
-                //    members.Add(new XElement(membersList[i]));
-                //}
                 doc.Save("HuntLog.xml");
             }
         }

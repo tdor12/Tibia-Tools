@@ -56,7 +56,6 @@
             this.supplyCost_TB.Name = "supplyCost_TB";
             this.supplyCost_TB.Size = new System.Drawing.Size(536, 20);
             this.supplyCost_TB.TabIndex = 1;
-            this.supplyCost_TB.TextChanged += new System.EventHandler(this.supplyCost_TB_TextChanged);
             this.supplyCost_TB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.supplyCost_TB_KeyPress);
             // 
             // totalLoot_TB
