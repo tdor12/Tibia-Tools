@@ -50,12 +50,16 @@
             this.generate_btn = new System.Windows.Forms.Button();
             this.level_TB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(12, 9);
+            this.nameLabel.Location = new System.Drawing.Point(12, 39);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(77, 16);
             this.nameLabel.TabIndex = 0;
@@ -64,14 +68,14 @@
             // name_TB
             // 
             this.name_TB.HideSelection = false;
-            this.name_TB.Location = new System.Drawing.Point(115, 7);
+            this.name_TB.Location = new System.Drawing.Point(115, 37);
             this.name_TB.Name = "name_TB";
             this.name_TB.Size = new System.Drawing.Size(310, 26);
             this.name_TB.TabIndex = 1;
             // 
             // date_TB
             // 
-            this.date_TB.Location = new System.Drawing.Point(115, 39);
+            this.date_TB.Location = new System.Drawing.Point(115, 69);
             this.date_TB.Name = "date_TB";
             this.date_TB.Size = new System.Drawing.Size(310, 26);
             this.date_TB.TabIndex = 3;
@@ -79,7 +83,7 @@
             // dateLabel
             // 
             this.dateLabel.AutoSize = true;
-            this.dateLabel.Location = new System.Drawing.Point(12, 41);
+            this.dateLabel.Location = new System.Drawing.Point(12, 71);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(39, 16);
             this.dateLabel.TabIndex = 2;
@@ -87,7 +91,7 @@
             // 
             // desc_TB
             // 
-            this.desc_TB.Location = new System.Drawing.Point(115, 71);
+            this.desc_TB.Location = new System.Drawing.Point(115, 101);
             this.desc_TB.Name = "desc_TB";
             this.desc_TB.Size = new System.Drawing.Size(310, 26);
             this.desc_TB.TabIndex = 5;
@@ -95,7 +99,7 @@
             // descLabel
             // 
             this.descLabel.AutoSize = true;
-            this.descLabel.Location = new System.Drawing.Point(12, 73);
+            this.descLabel.Location = new System.Drawing.Point(12, 103);
             this.descLabel.Name = "descLabel";
             this.descLabel.Size = new System.Drawing.Size(77, 16);
             this.descLabel.TabIndex = 4;
@@ -104,7 +108,7 @@
             // typeLabel
             // 
             this.typeLabel.AutoSize = true;
-            this.typeLabel.Location = new System.Drawing.Point(12, 105);
+            this.typeLabel.Location = new System.Drawing.Point(12, 135);
             this.typeLabel.Name = "typeLabel";
             this.typeLabel.Size = new System.Drawing.Size(41, 16);
             this.typeLabel.TabIndex = 6;
@@ -112,7 +116,7 @@
             // 
             // duration_TB
             // 
-            this.duration_TB.Location = new System.Drawing.Point(115, 135);
+            this.duration_TB.Location = new System.Drawing.Point(115, 165);
             this.duration_TB.Name = "duration_TB";
             this.duration_TB.Size = new System.Drawing.Size(310, 26);
             this.duration_TB.TabIndex = 9;
@@ -121,7 +125,7 @@
             // durationLabel
             // 
             this.durationLabel.AutoSize = true;
-            this.durationLabel.Location = new System.Drawing.Point(12, 137);
+            this.durationLabel.Location = new System.Drawing.Point(12, 167);
             this.durationLabel.Name = "durationLabel";
             this.durationLabel.Size = new System.Drawing.Size(61, 16);
             this.durationLabel.TabIndex = 8;
@@ -129,7 +133,7 @@
             // 
             // profit_TB
             // 
-            this.profit_TB.Location = new System.Drawing.Point(115, 167);
+            this.profit_TB.Location = new System.Drawing.Point(115, 197);
             this.profit_TB.Name = "profit_TB";
             this.profit_TB.Size = new System.Drawing.Size(310, 26);
             this.profit_TB.TabIndex = 11;
@@ -138,7 +142,7 @@
             // profitLabel
             // 
             this.profitLabel.AutoSize = true;
-            this.profitLabel.Location = new System.Drawing.Point(12, 169);
+            this.profitLabel.Location = new System.Drawing.Point(12, 199);
             this.profitLabel.Name = "profitLabel";
             this.profitLabel.Size = new System.Drawing.Size(46, 16);
             this.profitLabel.TabIndex = 10;
@@ -146,7 +150,7 @@
             // 
             // exp_TB
             // 
-            this.exp_TB.Location = new System.Drawing.Point(115, 199);
+            this.exp_TB.Location = new System.Drawing.Point(115, 229);
             this.exp_TB.Name = "exp_TB";
             this.exp_TB.Size = new System.Drawing.Size(310, 26);
             this.exp_TB.TabIndex = 13;
@@ -155,7 +159,7 @@
             // expLabel
             // 
             this.expLabel.AutoSize = true;
-            this.expLabel.Location = new System.Drawing.Point(12, 201);
+            this.expLabel.Location = new System.Drawing.Point(12, 231);
             this.expLabel.Name = "expLabel";
             this.expLabel.Size = new System.Drawing.Size(34, 16);
             this.expLabel.TabIndex = 12;
@@ -163,7 +167,7 @@
             // 
             // party_TB
             // 
-            this.party_TB.Location = new System.Drawing.Point(115, 231);
+            this.party_TB.Location = new System.Drawing.Point(115, 261);
             this.party_TB.Name = "party_TB";
             this.party_TB.Size = new System.Drawing.Size(310, 26);
             this.party_TB.TabIndex = 15;
@@ -171,7 +175,7 @@
             // partyLabel
             // 
             this.partyLabel.AutoSize = true;
-            this.partyLabel.Location = new System.Drawing.Point(12, 233);
+            this.partyLabel.Location = new System.Drawing.Point(12, 263);
             this.partyLabel.Name = "partyLabel";
             this.partyLabel.Size = new System.Drawing.Size(99, 16);
             this.partyLabel.TabIndex = 14;
@@ -180,7 +184,7 @@
             // addHunt_Btn
             // 
             this.addHunt_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addHunt_Btn.Location = new System.Drawing.Point(15, 313);
+            this.addHunt_Btn.Location = new System.Drawing.Point(15, 343);
             this.addHunt_Btn.Name = "addHunt_Btn";
             this.addHunt_Btn.Size = new System.Drawing.Size(132, 55);
             this.addHunt_Btn.TabIndex = 18;
@@ -197,7 +201,7 @@
             "Duo",
             "Trio",
             "Quad"});
-            this.type_CB.Location = new System.Drawing.Point(115, 101);
+            this.type_CB.Location = new System.Drawing.Point(115, 131);
             this.type_CB.Name = "type_CB";
             this.type_CB.Size = new System.Drawing.Size(310, 24);
             this.type_CB.TabIndex = 17;
@@ -205,7 +209,7 @@
             // partyBtn
             // 
             this.partyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.partyBtn.Location = new System.Drawing.Point(290, 313);
+            this.partyBtn.Location = new System.Drawing.Point(290, 343);
             this.partyBtn.Name = "partyBtn";
             this.partyBtn.Size = new System.Drawing.Size(135, 55);
             this.partyBtn.TabIndex = 19;
@@ -216,7 +220,7 @@
             // generate_btn
             // 
             this.generate_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generate_btn.Location = new System.Drawing.Point(153, 313);
+            this.generate_btn.Location = new System.Drawing.Point(153, 343);
             this.generate_btn.Name = "generate_btn";
             this.generate_btn.Size = new System.Drawing.Size(127, 55);
             this.generate_btn.TabIndex = 21;
@@ -226,7 +230,7 @@
             // 
             // level_TB
             // 
-            this.level_TB.Location = new System.Drawing.Point(115, 263);
+            this.level_TB.Location = new System.Drawing.Point(115, 293);
             this.level_TB.Name = "level_TB";
             this.level_TB.Size = new System.Drawing.Size(310, 26);
             this.level_TB.TabIndex = 16;
@@ -235,17 +239,42 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 265);
+            this.label2.Location = new System.Drawing.Point(12, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Level:";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(457, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem1});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.aboutToolStripMenuItem.Text = "Files";
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            // 
             // HuntLogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 379);
+            this.ClientSize = new System.Drawing.Size(457, 418);
             this.Controls.Add(this.level_TB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.generate_btn);
@@ -267,11 +296,15 @@
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.name_TB);
             this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "HuntLogForm";
             this.Text = "Tibia Tools: Hunt Log";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +335,9 @@
         private System.Windows.Forms.Button generate_btn;
         private System.Windows.Forms.TextBox level_TB;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
     }
 }
 

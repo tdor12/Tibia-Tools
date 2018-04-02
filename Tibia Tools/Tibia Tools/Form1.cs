@@ -326,5 +326,11 @@ function sortTable(n) {{
                 e.Handled = true;
             }
         }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AboutBox1 about = new AboutBox1();
+            about.Visible = true;
+        }
     }
 }

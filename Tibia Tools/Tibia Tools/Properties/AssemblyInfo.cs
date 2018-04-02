@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Tibia Tools")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Minimal testing has been done, so be on the lookout for bugs!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("https://github.com/imora128/Tibia-Tools-Public")]
 [assembly: AssemblyProduct("Tibia Tools")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("https://www.reddit.com/user/critmaw")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
