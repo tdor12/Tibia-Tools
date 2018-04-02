@@ -53,7 +53,7 @@ namespace Tibia_Tools
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<String> partyMembers = new List<String>();
+           // List<String> partyMembers = new List<String>();
             String name = name_TB.Text;
             String date = date_TB.Text;
             String desc = desc_TB.Text;
@@ -66,10 +66,10 @@ namespace Tibia_Tools
             {
                 profit = Regex.Replace(profit, @"k", "000");
                 exp = Regex.Replace(exp, @"k", "000");
-                partyMembers = Regex.Replace(party, @"\s+", "").Split(',').ToList();
+                //partyMembers = Regex.Replace(party, @"\s+", "").Split(',').ToList();
 
                 //public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, List<String> memberList, String huntType)
-                Singleton.Instance.AddHunt(name, date, desc, duration, profit, exp, level, partyMembers, type_CB.SelectedItem.ToString());
+                Singleton.Instance.AddHunt(name, date, desc, duration, profit, exp, level, party, type_CB.SelectedItem.ToString());
 
             } else 
             {

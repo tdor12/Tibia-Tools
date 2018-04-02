@@ -71,7 +71,7 @@ namespace Tibia_Tools.Properties
             Console.WriteLine(eles[eles.Count - 1].FirstAttribute.Value);
         }
 
-        public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, String huntLevel, List<String> memberList, String huntType)
+        public void AddHunt(String huntName, String huntDate, String huntDesc, String huntDuration, String huntProfit, String huntEXP, String huntLevel, String huntMembers, String huntType)
         {
             if (!File.Exists("HuntLog.xml"))
             {
@@ -85,11 +85,11 @@ namespace Tibia_Tools.Properties
                 doc = XDocument.Load("HuntLog.XML");
                 Singleton.Instance.SetXML(doc);
             }
-            List<XElement> membersList = new List<XElement>();
-            memberList.ForEach(delegate (String _name) {
-                membersList.Add(new XElement("Name", _name));
+            //List<XElement> membersList = new List<XElement>();
+            //memberList.ForEach(delegate (String _name) {
+            //    membersList.Add(new XElement("Name", _name));
 
-            });
+            //});
             Console.WriteLine("Inside addhunt");
             Console.WriteLine(id);
             XElement hunt = doc.Descendants("HuntLog").FirstOrDefault();
@@ -105,16 +105,16 @@ namespace Tibia_Tools.Properties
                 XElement profit = new XElement("Profit", huntProfit);
                 XElement EXP = new XElement("EXP", huntEXP);
                 XElement level = new XElement("Level", huntLevel);
-                XElement members = new XElement("Members", membersList[0]);
+                XElement members = new XElement("Members", huntMembers);
                 hunt.Add(new XElement("Hunt", new XAttribute("ID", id.ToString()),
                     name, date, desc, type, duration, profit, EXP, level, members));
-                XElement test = doc.Descendants("Hunt").Where(x => (string)x.Attribute("ID") == id.ToString()).FirstOrDefault();
-                IEnumerable<XElement> rows = test.Descendants("Members");
-                XElement firstRow = rows.First();
-                for (int i = 1; i < membersList.Count; i++)
-                {
-                    members.Add(new XElement(membersList[i]));
-                }
+                //XElement test = doc.Descendants("Hunt").Where(x => (string)x.Attribute("ID") == id.ToString()).FirstOrDefault();
+                //IEnumerable<XElement> rows = test.Descendants("Members");
+                //XElement firstRow = rows.First();
+                //for (int i = 1; i < membersList.Count; i++)
+                //{
+                //    members.Add(new XElement(membersList[i]));
+                //}
                 doc.Save("HuntLog.xml");
             }
         }

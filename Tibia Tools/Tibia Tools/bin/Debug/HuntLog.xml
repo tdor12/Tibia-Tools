@@ -14,4 +14,48 @@
       <Name>robert</Name>
     </Members>
   </Hunt>
+  <Hunt ID="2">
+    <Name>test</Name>
+    <Date>04/02/2018</Date>
+    <Desc>lol</Desc>
+    <Type>Solo</Type>
+    <Duration>2</Duration>
+    <Profit>1123</Profit>
+    <EXP>12311141</EXP>
+    <Level>12312</Level>
+    <Members>italo, robert</Members>
+  </Hunt>
+  <Hunt ID="3">
+    <Name>test</Name>
+    <Date>04/02/2018</Date>
+    <Desc>lol</Desc>
+    <Type>Solo</Type>
+    <Duration>2</Duration>
+    <Profit>1123</Profit>
+    <EXP>12311141</EXP>
+    <Level>12312</Level>
+    <Members>italo</Members>
+  </Hunt>
+  <Hunt ID="4">
+    <Name>test</Name>
+    <Date>04/02/2018</Date>
+    <Desc>lol</Desc>
+    <Type>Solo</Type>
+    <Duration>2</Duration>
+    <Profit>1123</Profit>
+    <EXP>12311141</EXP>
+    <Level>12312</Level>
+    <Members>italo, hehe, xd</Members>
+  </Hunt>
+  <Hunt ID="5">
+    <Name>test</Name>
+    <Date>04/02/2018</Date>
+    <Desc>lol</Desc>
+    <Type>Solo</Type>
+    <Duration>2</Duration>
+    <Profit>1123</Profit>
+    <EXP>12311141</EXP>
+    <Level>12312</Level>
+    <Members>Medical Wizard</Members>
+  </Hunt>
 </HuntLog>
