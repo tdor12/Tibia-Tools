@@ -57,6 +57,7 @@
             this.supplyCost_TB.Size = new System.Drawing.Size(536, 20);
             this.supplyCost_TB.TabIndex = 1;
             this.supplyCost_TB.TextChanged += new System.EventHandler(this.supplyCost_TB_TextChanged);
+            this.supplyCost_TB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.supplyCost_TB_KeyPress);
             // 
             // totalLoot_TB
             // 
@@ -64,6 +65,7 @@
             this.totalLoot_TB.Name = "totalLoot_TB";
             this.totalLoot_TB.Size = new System.Drawing.Size(536, 20);
             this.totalLoot_TB.TabIndex = 3;
+            this.totalLoot_TB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.totalLoot_TB_KeyPress);
             // 
             // label2
             // 

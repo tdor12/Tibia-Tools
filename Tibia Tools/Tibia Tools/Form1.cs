@@ -256,34 +256,75 @@ function sortTable(n) {{
             string test = "";
             double totalHours = 0.0;
             XDocument doc = Singleton.Instance.GetXML();
-            foreach (var child in doc.Element("HuntLog").Elements())
+            try
             {
-                test += "<tr>";
-                foreach (var child1 in child.Elements())
+                foreach (var child in doc.Element("HuntLog").Elements())
                 {
-                    //Console.WriteLine(child1.Name + " : " + child1.Value);
-                    if (child1.Name == "Profit")
+                    test += "<tr>";
+                    foreach (var child1 in child.Elements())
                     {
-                        totalMoney += Convert.ToInt64(child1.Value);
-                        test += string.Format("<td>{0}</td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value)))); 
-                        continue;
+                        //Console.WriteLine(child1.Name + " : " + child1.Value);
+                        if (child1.Name == "Profit")
+                        {
+                            totalMoney += Convert.ToInt64(child1.Value);
+                            test += string.Format("<td>{0}</td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value))));
+                            continue;
 
-                    } else if (child1.Name == "EXP")
-                    {
-                        totalXP += Convert.ToInt64(child1.Value);
-                        test += string.Format("<td>{0}</td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value))));
-                        continue;
-                    } else if (child1.Name == "Duration")
-                    {
-                        totalHours += Convert.ToDouble(child1.Value);
+                        }
+                        else if (child1.Name == "EXP")
+                        {
+                            totalXP += Convert.ToInt64(child1.Value);
+                            test += string.Format("<td>{0}</td>", shortenNumber(String.Format("{0:#,##0}", Convert.ToInt64(child1.Value))));
+                            continue;
+                        }
+                        else if (child1.Name == "Duration")
+                        {
+                            totalHours += Convert.ToDouble(child1.Value);
+                        }
+                        test += string.Format("<td>{0}</td>\n", child1.Value);
                     }
-                    test += string.Format("<td>{0}</td>\n", child1.Value);
+                    test += "</tr>\n";
                 }
-                test += "</tr>\n";
+                File.WriteAllText("HuntLogSummary.html", String.Format(html, test, String.Format("<center><p><b>\nTotal Profit: {0} ({3})<br/>\n Total EXP: {1} ({4})<br/>\n Total Hours: {2}\n</b></p></center>", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours, shortenNumber(String.Format("{0:#,##0}", totalMoney)), shortenNumber(String.Format("{0:#,##0}", totalXP)))));
+                Console.WriteLine(shortenNumber(String.Format("{0:#,##0}", totalMoney)));
+                Process.Start(@"HuntLogSummary.html");
             }
-            File.WriteAllText("HuntLogSummary.html",String.Format(html, test, String.Format("<center><p><b>\nTotal Profit: {0} ({3})<br/>\n Total EXP: {1} ({4})<br/>\n Total Hours: {2}\n</b></p></center>", String.Format("{0:#,##0}", totalMoney), String.Format("{0:#,##0}", totalXP), totalHours, shortenNumber(String.Format("{0:#,##0}", totalMoney)), shortenNumber(String.Format("{0:#,##0}", totalXP)))));
-            Console.WriteLine(shortenNumber(String.Format("{0:#,##0}", totalMoney)));
-            Process.Start(@"HuntLogSummary.html");
+            catch (System.NullReferenceException)
+            {
+                MessageBox.Show("Something wrong with your XML file. Make sure there are entries in it.");
+            }
+        }
+
+        private void duration_TB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void profit_TB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void exp_TB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void level_TB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

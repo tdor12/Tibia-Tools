@@ -116,6 +116,7 @@
             this.duration_TB.Name = "duration_TB";
             this.duration_TB.Size = new System.Drawing.Size(310, 26);
             this.duration_TB.TabIndex = 9;
+            this.duration_TB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.duration_TB_KeyPress);
             // 
             // durationLabel
             // 
@@ -132,6 +133,7 @@
             this.profit_TB.Name = "profit_TB";
             this.profit_TB.Size = new System.Drawing.Size(310, 26);
             this.profit_TB.TabIndex = 11;
+            this.profit_TB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.profit_TB_KeyPress);
             // 
             // profitLabel
             // 
@@ -148,6 +150,7 @@
             this.exp_TB.Name = "exp_TB";
             this.exp_TB.Size = new System.Drawing.Size(310, 26);
             this.exp_TB.TabIndex = 13;
+            this.exp_TB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.exp_TB_KeyPress);
             // 
             // expLabel
             // 
@@ -227,6 +230,7 @@
             this.level_TB.Name = "level_TB";
             this.level_TB.Size = new System.Drawing.Size(310, 26);
             this.level_TB.TabIndex = 16;
+            this.level_TB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.level_TB_KeyPress);
             // 
             // label2
             // 

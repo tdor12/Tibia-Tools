@@ -65,16 +65,38 @@ namespace Tibia_Tools
         private void populate_btn_Click(object sender, EventArgs e)
         {
             int profit = 0;
-            try
+            if (dividedProfit_TB.Text != "")
             {
-                profit = Convert.ToInt32(dividedProfit_TB.Text);
-                TextBox foo = (TextBox)huntForm.Controls["profit_TB"];
-                foo.Text = profit.ToString();
+                try
+                {
+                    profit = Convert.ToInt32(dividedProfit_TB.Text);
+                    TextBox foo = (TextBox)huntForm.Controls["profit_TB"];
+                    foo.Text = profit.ToString();
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Issue converting divided profit");
+                    return;
+                }
+            } else {
+                MessageBox.Show("Fill out the fields and calculate first. ");
+              
             }
-            catch (FormatException)
+        }
+
+        private void supplyCost_TB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
             {
-                MessageBox.Show("Issue converting divided profit");
-                return;
+                e.Handled = true;
+            }
+        }
+
+        private void totalLoot_TB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

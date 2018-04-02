@@ -1,68 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HuntLog>
   <Hunt ID="1">
-    <Name>Glooth Bandits</Name>
-    <Date>03/24/2018</Date>
-    <Desc>Got 298 and 3/4. Will easily get 299  tomorrow.</Desc>
+    <Name>chillin</Name>
+    <Date>04/02/2018</Date>
+    <Desc>hehexd</Desc>
     <Type>Solo</Type>
-    <Duration>4</Duration>
-    <Profit>561325</Profit>
-    <EXP>5532145</EXP>
-    <Level>298</Level>
+    <Duration>1</Duration>
+    <Profit>120313</Profit>
+    <EXP>0123910</EXP>
+    <Level>1203</Level>
     <Members>
-      <Name>MedicalWizard</Name>
-    </Members>
-  </Hunt>
-  <Hunt ID="2">
-    <Name>Water Elementals</Name>
-    <Date>03/24/2018</Date>
-    <Desc>72-74</Desc>
-    <Type>Solo</Type>
-    <Duration>1.1</Duration>
-    <Profit>-2377</Profit>
-    <EXP>350100</EXP>
-    <Level>74</Level>
-    <Members>
-      <Name>ItaloLindsei</Name>
-    </Members>
-  </Hunt>
-  <Hunt ID="3">
-    <Name>Glooth Bandits</Name>
-    <Date>03/25/2018</Date>
-    <Desc>298-300. Had to spend some gold for XP boosts or it'd take ages.</Desc>
-    <Type>Solo</Type>
-    <Duration>3.5</Duration>
-    <Profit>460835</Profit>
-    <EXP>5395002</EXP>
-    <Level>300</Level>
-    <Members>
-      <Name>MedicalWizard</Name>
-    </Members>
-  </Hunt>
-  <Hunt ID="4">
-    <Name>Glooth Bandits</Name>
-    <Date>03/28/2018</Date>
-    <Desc>Got 301</Desc>
-    <Type>Solo</Type>
-    <Duration>3</Duration>
-    <Profit>401878</Profit>
-    <EXP>3985906</EXP>
-    <Level>301</Level>
-    <Members>
-      <Name>MedicalWizard</Name>
-    </Members>
-  </Hunt>
-  <Hunt ID="5">
-    <Name>Glooth Bandits</Name>
-    <Date>03/29/2018</Date>
-    <Desc>Got another level. Had to d/c to kill ferumbras in another server, so mission some stats from that.</Desc>
-    <Type>Solo</Type>
-    <Duration>2.9</Duration>
-    <Profit>527852</Profit>
-    <EXP>4324341</EXP>
-    <Level>302</Level>
-    <Members>
-      <Name>MedicalWizard</Name>
+      <Name>medicalwizard</Name>
+      <Name>robert</Name>
     </Members>
   </Hunt>
 </HuntLog>
