@@ -45,7 +45,7 @@ namespace Tibia_Tools
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Error. Something's wrong with the XML file");
+                    MessageBox.Show("Error. Something's wrong with the XML file","Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -73,7 +73,7 @@ namespace Tibia_Tools
 
             } else 
             {
-                MessageBox.Show("Please fill out the empty field");
+                MessageBox.Show("Please fill out the empty field", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -291,7 +291,7 @@ function sortTable(n) {{
             }
             catch (System.NullReferenceException)
             {
-                MessageBox.Show("Something wrong with your XML file. Make sure there are entries in it.");
+                MessageBox.Show("Something wrong with your XML file. Make sure there are entries in it.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

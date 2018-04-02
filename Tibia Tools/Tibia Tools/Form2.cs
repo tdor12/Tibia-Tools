@@ -49,7 +49,7 @@ namespace Tibia_Tools
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("Error in trying to convert string to integer. Check your input. Error msg: " );
+                    MessageBox.Show("Error in trying to convert string to integer. Check your input. ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 int totalProfit = totalLoot - totalWaste;
@@ -58,7 +58,7 @@ namespace Tibia_Tools
 
             } else
             {
-                MessageBox.Show("Please fill in both required fields");
+                MessageBox.Show("Please fill in both required fields", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -75,11 +75,11 @@ namespace Tibia_Tools
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("Issue converting divided profit");
+                    MessageBox.Show("Issue converting divided profit", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             } else {
-                MessageBox.Show("Fill out the fields and calculate first. ");
+                MessageBox.Show("Fill out the fields and calculate first. ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
               
             }
         }
