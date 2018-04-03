@@ -11,4 +11,15 @@
     <Level>111</Level>
     <Members>123</Members>
   </Hunt>
+  <Hunt ID="2">
+    <Name>sadfsdf</Name>
+    <Date>04/02/2018</Date>
+    <Desc>asdfsdf</Desc>
+    <Type>Solo</Type>
+    <Duration>123</Duration>
+    <Profit>1111</Profit>
+    <EXP>123123</EXP>
+    <Level>2342423</Level>
+    <Members>1231312</Members>
+  </Hunt>
 </HuntLog>

@@ -27,6 +27,7 @@ namespace Tibia_Tools
         {
             MaximizeBox = false;
             type_CB.SelectedIndex = 0;
+            //This may cause an issue for people who use a different format...
             date_TB.Text = DateTime.Now.ToString("MM/dd/yyyy");
             if (File.Exists("HuntLog.xml"))
             {

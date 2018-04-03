@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Tibia Tools")]
 [assembly: AssemblyDescription("Minimal testing has been done, so be on the lookout for bugs!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("https://github.com/imora128/Tibia-Tools-Public")]
+[assembly: AssemblyCompany("https://github.com/imora128/Tibia-Tools")]
 [assembly: AssemblyProduct("Tibia Tools")]
 [assembly: AssemblyCopyright("https://www.reddit.com/user/critmaw")]
 [assembly: AssemblyTrademark("")]
